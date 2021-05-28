@@ -1,0 +1,437 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>EinsteinPy - Making Einstein possible in Python &mdash; EinsteinPy</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting started" href="getting_started.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> EinsteinPy
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide.html">User guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metric.html">Vacuum Solutions to Einstein’s Field Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter.html">Jupyter notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">What’s new</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">EinsteinPy API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codeofconduct.html">Code of Conduct</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">EinsteinPy</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>EinsteinPy - Making Einstein possible in Python</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="einsteinpy-making-einstein-possible-in-python">
+<h1>EinsteinPy - Making Einstein possible in Python<a class="headerlink" href="#einsteinpy-making-einstein-possible-in-python" title="Permalink to this headline">¶</a></h1>
+<a class="reference external image-reference" href="https://einsteinpy.org/"><img alt="EinsteinPy logo" class="align-center" src="https://einsteinpy.org/img/wordmark.png" style="width: 675px;" /></a>
+<p><strong>EinsteinPy</strong> is an open source pure Python package dedicated to problems arising
+in General Relativity and gravitational physics, such as geodesics plotting for
+Schwarzschild, Kerr and Kerr Newman space-time model, calculation of Schwarzschild
+radius, calculation of Event Horizon and Ergosphere for Kerr space-time. Symbolic
+Manipulations of various tensors like Metric, Riemann, Ricci and Christoffel Symbols
+is also possible using the library. EinsteinPy also features Hypersurface Embedding of
+Schwarzschild space-time, which will soon lead to modelling of Gravitational Lensing!
+It is released under the MIT license.</p>
+<p>View <a class="reference external" href="https://github.com/einsteinpy/einsteinpy">source code</a> of EinsteinPy!</p>
+<p>Key features of EinsteinPy are:</p>
+<ul class="simple">
+<li><p>Geometry analysis and trajectory calculation in vacuum solutions of Einstein’s field equations</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Schwarzschild space-time</p></li>
+<li><p>Kerr space-time</p></li>
+<li><p>Kerr-Newman space-time</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>Various utilities related to above geometry models</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Schwarzschild Radius</p></li>
+<li><p>Event horizon and ergosphere for Kerr black hole</p></li>
+<li><p>Maxwell Tensor and electromagnetic potential in Kerr-Newman space-time</p></li>
+<li><p>And much more!</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>Symbolic Calculation of various quantities</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Christoffel Symbols</p></li>
+<li><p>Riemann Curvature Tensor</p></li>
+<li><p>Ricci Tensor</p></li>
+<li><p>Index uppering and lowering!</p></li>
+<li><p>Simplification of symbolic expressions</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>Geodesic Plotting</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Static Plotting using Matplotlib</p></li>
+<li><p>Interactive 2D plotting</p></li>
+<li><p>Environment aware plotting!</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>Coordinate conversion with unit handling</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Spherical/Cartesian Coordinates</p></li>
+<li><p>Boyer-Lindquist/Cartesian Coordinates</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>Hypersurface Embedding of Schwarzschild Space-Time</p></li>
+<li><p>Shadow cast by an thin emission disk around a Schwarzschild Black Hole</p></li>
+</ul>
+<p>And more to come!</p>
+<p>Einsteinpy is developed by an open community. Release
+announcements and general discussion take place on our <a class="reference external" href="https://groups.io/g/einsteinpy-dev">mailing list</a>
+and <a class="reference external" href="https://riot.im/app/#/room/#einsteinpy:matrix.org">chat</a>.</p>
+<div class="classictemplate template" style="display: block;">
+<style type="text/css">
+  #groupsio_embed_signup input { border:1px solid #999; -webkit-appearance:none; }
+  #groupsio_embed_signup .email { display:block; padding:8px 0; margin:0 4% 10px 0; text-indent:5px; width:58%; min-width:130px; }
+  #groupsio_embed_signup { background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+  #groupsio_embed_signup .button {
+      width:25%; margin:0 0 10px 0; min-width:90px;
+      background-image: linear-gradient(to bottom,#337ab7 0,#265a88 100%);
+      background-repeat: repeat-x;
+      border-color: #245580;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 1px rgba(0,0,0,.075);
+      padding: 5px 10px;
+      font-size: 12px;
+      line-height: 1.5;
+      border-radius: 3px;
+      color: #fff;
+      background-color: #337ab7;
+      display: inline-block;
+      margin-bottom: 0;
+      font-weight: 400;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      position: relative;
+      top: -15px;
+  }
+</style>
+<div id="groupsio_embed_signup">
+<form action="https://groups.io/g/einsteinpy-dev/signup?u=3341734695881558152" method="post" id="groupsio-embedded-subscribe-form" name="groupsio-embedded-subscribe-form" target="_blank">
+    <div id="groupsio_embed_signup_scroll">
+      <input value="" name="email" class="email" id="email" placeholder="email address" required="" type="email">
+
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input name="b_3341734695881558152" tabindex="-1" value="" type="text"></div>
+    <div id="templatearchives"><p></p></div>
+    <input value="Subscribe to mailing list! 🚀" name="subscribe" id="groupsio-embedded-subscribe" class="button" type="submit">
+  </div>
+</form>
+</div>
+</div><p>The <a class="reference external" href="https://github.com/einsteinpy/einsteinpy">source code</a>, <a class="reference external" href="https://github.com/einsteinpy/einsteinpy/issues">issue tracker</a> and <a class="reference external" href="https://github.com/einsteinpy/einsteinpy/wiki/">wiki</a> are hosted on GitHub, and all
+contributions and feedback are more than welcome. You can test EinsteinPy in your
+browser using binder, a cloud Jupyter notebook server:</p>
+<a class="reference external image-reference" href="https://beta.mybinder.org/v2/gh/einsteinpy/einsteinpy/main?filepath=index.ipynb"><img alt="https://img.shields.io/badge/launch-binder-e66581.svg?style=flat-square" src="https://img.shields.io/badge/launch-binder-e66581.svg?style=flat-square" /></a>
+<p>EinsteinPy works on recent versions of Python and is released under
+the MIT license, hence allowing commercial use of the library.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">einsteinpy.plotting</span> <span class="kn">import</span> <span class="n">GeodesicPlotter</span>
+<span class="kn">from</span> <span class="nn">einsteinpy.examples</span> <span class="kn">import</span> <span class="n">perihelion</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">GeodesicPlotter</span><span class="p">()</span>
+<span class="n">a</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">perihelion</span><span class="p">())</span>
+<span class="n">a</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="figure align-center" style="width: 650px">
+<img alt="Advancement of perihelion in Schwarzschild space-time" src="_images/perihelion.png" />
+</div>
+<div class="section" id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#who-can-use">Who can use?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#running-your-first-code-using-the-library">Running your first code using the library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#contribute">Contribute</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide.html">User guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user_guide.html#defining-the-geometry-metric-objects">Defining the geometry: <code class="xref py py-class docutils literal notranslate"><span class="pre">metric</span></code> objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide.html#bodies-module-bodies">Bodies Module: <code class="xref py py-class docutils literal notranslate"><span class="pre">bodies</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_guide.html#utilities-utils">Utilities: <code class="xref py py-class docutils literal notranslate"><span class="pre">utils</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="metric.html">Vacuum Solutions to Einstein’s Field Equations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="metric.html#einstein-s-equation">Einstein’s Equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metric.html#metric-tensor">Metric Tensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metric.html#notion-of-curved-space">Notion of Curved Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metric.html#exact-solutions-of-efe">Exact Solutions of EFE</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter.html">Jupyter notebooks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples/Plotting%20spacial%20hypersurface%20embedding%20for%20schwarzschild%20spacetime.html">Plotting Spacial Hypersurface Embedding for Schwarzschild Space-Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/Shadow%20cast%20by%20an%20thin%20emission%20disk%20around%20a%20black%20hole.html">Shadow cast by an thin emission disk around a Schwarzschild Black Hole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/Animations%20in%20EinsteinPy.html">Animations in EinsteinPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/Using%20Geodesics%20%28Back-ends%20%26%20Plotting%29.html">Using Geodesics (Back-ends &amp; Plotting)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/Visualizing%20Event%20Horizon%20and%20Ergosphere%20%28Singularities%29%20of%20Kerr%20Metric%20or%20Black%20Hole.html">Visualizing Event Horizon and Ergosphere (Singularities) of Kerr Metric or Black Hole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/Visualizing%20Frame%20Dragging%20in%20Kerr%20Spacetime.html">Visualizing Frame Dragging in Kerr Spacetime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/Visualizing%20Precession%20in%20Schwarzschild%20Spacetime.html">Visualizing Precession in Schwarzschild Spacetime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/Einstein%20Tensor%20symbolic%20calculation.html">Einstein Tensor calculations using Symbolic module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/Lambdify%20symbolic%20calculation.html">Lambdify in symbolic module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/Playing%20with%20Contravariant%20and%20Covariant%20Indices%20in%20Tensors%28Symbolic%29.html">Contravariant &amp; Covariant indices in Tensors (Symbolic)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/Predefined%20Metrics%20in%20Symbolic%20Module.html">Predefined Metrics in Symbolic Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/Ricci%20Tensor%20and%20Scalar%20Curvature%20symbolic%20calculation.html">Ricci Tensor and Scalar Curvature calculations using Symbolic module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/Symbolically%20Understanding%20Christoffel%20Symbol%20and%20Riemann%20Curvature%20Tensor%20using%20EinsteinPy.html">Symbolically Understanding Christoffel Symbol and Riemann Curvature Tensor using EinsteinPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/Weyl%20Tensor%20symbolic%20calculation.html">Weyl Tensor calculations using Symbolic module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">What’s new</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#einsteinpy-0-4-0-2021-05-06">einsteinpy 0.4.0 - 2021-05-06</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#einsteinpy-0-3-1-2021-01-16">einsteinpy 0.3.1 - 2021-01-16</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#einsteinpy-0-3-0-2020-05-05">einsteinpy 0.3.0 - 2020-05-05</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#einsteinpy-0-2-1-2019-11-02">einsteinpy 0.2.1 - 2019-11-02</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#einsteinpy-0-2-0-2019-07-15">einsteinpy 0.2.0 - 2019-07-15</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#einsteinpy-0-1-0-2019-03-08">einsteinpy 0.1.0 - 2019-03-08</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dev_guide.html">Developer Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dev_guide.html#bug-reporting">Bug reporting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev_guide.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev_guide.html#code-writing">Code writing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev_guide.html#development-environment">Development environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev_guide.html#code-linting">Code Linting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">EinsteinPy API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codeofconduct.html">Code of Conduct</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="getting_started.html" class="btn btn-neutral float-right" title="Getting started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021 EinsteinPy Development Team.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

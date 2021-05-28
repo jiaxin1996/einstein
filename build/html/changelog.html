@@ -1,0 +1,590 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>What’s new &mdash; EinsteinPy</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Developer Guide" href="dev_guide.html" />
+    <link rel="prev" title="Weyl Tensor calculations using Symbolic module" href="examples/Weyl%20Tensor%20symbolic%20calculation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> EinsteinPy
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide.html">User guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metric.html">Vacuum Solutions to Einstein’s Field Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter.html">Jupyter notebooks</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">What’s new</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#einsteinpy-0-4-0-2021-05-06">einsteinpy 0.4.0 - 2021-05-06</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#changes">Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contributors">Contributors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#einsteinpy-0-3-1-2021-01-16">einsteinpy 0.3.1 - 2021-01-16</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Contributors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#einsteinpy-0-3-0-2020-05-05">einsteinpy 0.3.0 - 2020-05-05</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#features">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Contributors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#einsteinpy-0-2-1-2019-11-02">einsteinpy 0.2.1 - 2019-11-02</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Contributors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#einsteinpy-0-2-0-2019-07-15">einsteinpy 0.2.0 - 2019-07-15</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Contributors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bugs-fixed">Bugs Fixed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#backwards-incompatible-changes">Backwards incompatible changes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#einsteinpy-0-1-0-2019-03-08">einsteinpy 0.1.0 - 2019-03-08</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">Contributors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dev_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">EinsteinPy API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codeofconduct.html">Code of Conduct</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EinsteinPy</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>What’s new</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/changelog.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="what-s-new">
+<h1>What’s new<a class="headerlink" href="#what-s-new" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="einsteinpy-0-4-0-2021-05-06">
+<h2>einsteinpy 0.4.0 - 2021-05-06<a class="headerlink" href="#einsteinpy-0-4-0-2021-05-06" title="Permalink to this headline">¶</a></h2>
+<p>This major release brings a lot of improvements to the numerical module of the project. COVID19 is proving
+to be very difficult for India and we are trying to cope up. Please forgive us for any issues you faced with
+the v0.3.1 and the documentation.</p>
+<div class="section" id="changes">
+<h3>Changes<a class="headerlink" href="#changes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>[#506]: Tests moved outside of the package.</p></li>
+<li><p>[#510]: Added a utility function for Outer Product and Contraction of Tensors in the symbolic module.</p></li>
+<li><p>[#512]: Refactored metric, utils and geodesic modules, added metric.BaseMetric class</p></li>
+<li><p>[#512]: Fixed #113, Fixed cyclomatic complexity issue in metric.Schwarzschild and metric.Kerr classes</p></li>
+<li><p>[#512]: Fixed #141, Refactored utils and merged most utilities into metric itself</p></li>
+<li><p>[#512]: Fixed #410, Improved __str__ and __repr__ messages for Geodesic objects</p></li>
+<li><p>[#512]: Fixed #507, Fixed a mathematical inaccuracy in metric.Schwarzschild class</p></li>
+<li><p>[#512]: Fixed #508, Removed a stray scaling factor in metric.KerrNewman class</p></li>
+<li><p>[#512]: Fixed #514, Replaced Spin Parameter with Length Parameter throughout metric module</p></li>
+<li><p>[#512]: Fixed #515, Renamed “maxwell” to “em”</p></li>
+<li><p>[#521]: Refactored coordinates, geodesic and metric modules, added support for 4-Vectors</p></li>
+<li><p>[#521]: Fixed #517, Removed Spin Parameter from bodies</p></li>
+<li><p>[#521]: Fixed #524, Fixed breakage, caused due to isort changes</p></li>
+<li><p>[#521]: Partially fixed #523, Fixed Schwarzschild and Kerr</p></li>
+<li><p>[#527]: Added support for Null Geodesics in Kerr &amp; Schwarzschild Spacetimes</p></li>
+<li><p>[#527]: Added new features to plotting.geodesic</p></li>
+<li><p>[#527]: Dropped support for Python 3.6</p></li>
+<li><p>[#547]: Fixed #516, Added __all__ across modules</p></li>
+<li><p>[#547]: Fixed #552, Renamed missing attributes in einsteinpy.plotting.geodesic.static</p></li>
+<li><p>[#547]: Increased test coverage for einsteinpy.ijit</p></li>
+<li><p>[#551]: Fixed #526, Exceptions module added, CoordinateError class implemented</p></li>
+<li><p>[#565]: Fixed #549, Updated einsteinpy.symbolic Jupyter Notebooks</p></li>
+<li><p>[#548]: Fixed #36, Added support for animated Geodesic plots</p></li>
+<li><p>[#548]: Fixed #40, Added support for Order 4, 6 &amp; 8 Geodesic Integrators</p></li>
+<li><p>[#548]: Fixed #105, Added support for simulating Null Geodesics in Kerr &amp; Schwarzschild geometries</p></li>
+<li><p>[#548]: Fixed #122, Schwarzschild &amp; Kerr algorithms validated</p></li>
+<li><p>[#548]: Fixed #367, Scaling issues fixed for Frame Dragging</p></li>
+<li><p>[#548]: Fixed #535, Moved to a pure python geodesic solver, Julia dependency removed</p></li>
+<li><p>[#548]: Minor edits to documentation for geodesic and plotting.geodesic modules</p></li>
+<li><p>[#571]: Fixed #570, Updated Master to Main</p></li>
+<li><p>[#573]: Fixed bug in Riemann Tensor calculation from Christoffels</p></li>
+</ul>
+</div>
+<div class="section" id="contributors">
+<h3>Contributors<a class="headerlink" href="#contributors" title="Permalink to this headline">¶</a></h3>
+<p>This is the complete list of the people that contributed to this release, with a + sign indicating first contribution.</p>
+<ul class="simple">
+<li><p>Shreyas Bapat</p></li>
+<li><p>Jyotirmaya Shivottam</p></li>
+<li><p>Bibek Gautam</p></li>
+<li><p>Qbiwan+ (GitHub Username)</p></li>
+<li><p>Aditya Prashant Dalvi+</p></li>
+<li><p>Aditya Prakash+</p></li>
+<li><p>aweinr4+ (GitHub Username)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="einsteinpy-0-3-1-2021-01-16">
+<h2>einsteinpy 0.3.1 - 2021-01-16<a class="headerlink" href="#einsteinpy-0-3-1-2021-01-16" title="Permalink to this headline">¶</a></h2>
+<p>This release is a minor patch release for fixing a minor Debian issue.</p>
+<div class="section" id="id1">
+<h3>Contributors<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>This is the complete list of the people that contributed to this release, with a + sign indicating first contribution.</p>
+<ul class="simple">
+<li><p>Shreyas Bapat</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="einsteinpy-0-3-0-2020-05-05">
+<h2>einsteinpy 0.3.0 - 2020-05-05<a class="headerlink" href="#einsteinpy-0-3-0-2020-05-05" title="Permalink to this headline">¶</a></h2>
+<p>This major release would bring some very important improvements. This release fixes a very crucial
+bug with sympy. Fixes coordinate conversions so they don’t fail on edge cases anymore.</p>
+<p>EinsteinPy now uses GitHub Actions for macOS builds. Big changes to the plotting module.</p>
+<p>The release comes for the paper of EinsteinPy. The release marks the beginning of Google Summer of Code 2020.
+The release also brings a new rays module, which will form the base for null geodesics in future releases.</p>
+<div class="section" id="features">
+<h3>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Loads of Predefined Metrics</p></li>
+<li><p>Sympy version incompatibilities handled</p></li>
+<li><p>Numba as a default installation</p></li>
+<li><p>Lorentz Transform for Einstein Tensor</p></li>
+<li><p>Lorentz Transform to Tensor Class</p></li>
+<li><p>Hypersurface Plotting API similar to the common plotting API</p></li>
+<li><p>Find Function in Predefined Metrics</p></li>
+<li><p>Increased Code Coverage</p></li>
+<li><p>New rays module</p></li>
+<li><p>Plotting Black Hole Shadows</p></li>
+<li><p>Coordinate Subscripting</p></li>
+<li><p>Supports Python 3.8, dropping support fpr Python 3.5</p></li>
+<li><p>numpy moveaxis replaced with sympy permutedims</p></li>
+<li><p>name parameter in Metric Tensor</p></li>
+<li><p>Tags to Tensor names</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h3>Contributors<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>This is the complete list of the people that contributed to this release, with a + sign indicating first contribution.</p>
+<ul class="simple">
+<li><p>Shreyas Bapat</p></li>
+<li><p>Ritwik Saha</p></li>
+<li><p>Manvi Gupta</p></li>
+<li><p>Micky Yun Chan+</p></li>
+<li><p>DylanBrdt+ (GitHub Username)</p></li>
+<li><p>Vineet Gandham+</p></li>
+<li><p>Pratyush Kerhalkar+</p></li>
+<li><p>Bhavam Vidyarthi+</p></li>
+<li><p>Khalid Shaikh+</p></li>
+<li><p>Rohit Sanjay+</p></li>
+<li><p>Saurabh+</p></li>
+<li><p>Raahul Singh+</p></li>
+<li><p>Nimesh Vashishtha+</p></li>
+<li><p>Shamanth R Nayak K+</p></li>
+<li><p>Arnav Das+</p></li>
+<li><p>Gim Seng Ng+</p></li>
+<li><p>Nihar Gupte+</p></li>
+<li><p>Suyash Salampuria+</p></li>
+<li><p>Atul Mangat+</p></li>
+<li><p>Ganesh Tarone+</p></li>
+<li><p>Shreyas Kalvankar+</p></li>
+<li><p>Swastik Singh+</p></li>
+<li><p>Jyotirmaya Shivottam+</p></li>
+<li><p>Sitara Srinivasan+</p></li>
+<li><p>Aayush Gautam+</p></li>
+<li><p>Zac Yauney+</p></li>
+<li><p>Gagan-Shenoy+</p></li>
+<li><p>Bibek Gautam+</p></li>
+<li><p>Erin Allard+</p></li>
+<li><p>Suyog Garg+</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="einsteinpy-0-2-1-2019-11-02">
+<h2>einsteinpy 0.2.1 - 2019-11-02<a class="headerlink" href="#einsteinpy-0-2-1-2019-11-02" title="Permalink to this headline">¶</a></h2>
+<p>This minor release would bring improvements and new feature additions to the already existing symbolic calculations module along
+with performance boosts of order of 15x.</p>
+<p>This release concludes the SOCIS 2019 projects of Sofía Ortín Vela (<a class="reference external" href="mailto:ortinvela&#46;sofia&#37;&#52;&#48;gmail&#46;com">ortinvela<span>&#46;</span>sofia<span>&#64;</span>gmail<span>&#46;</span>com</a>) and Varun Singh(<a class="reference external" href="mailto:varunsinghs2021&#37;&#52;&#48;gmail&#46;com">varunsinghs2021<span>&#64;</span>gmail<span>&#46;</span>com</a>).</p>
+<p>Part of this release is sponsored by European Space Agency, through Summer of Code in Space
+(SOCIS) 2019 program.</p>
+<div class="section" id="id3">
+<h3>Features<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>New tensors in symbolic module</p>
+<ul>
+<li><p>Ricci Scalar</p></li>
+<li><p>Weyl Tensor</p></li>
+<li><p>Stress-Energy-Momentum Tensor</p></li>
+<li><p>Einstein Tensor</p></li>
+<li><p>Schouten Tensor</p></li>
+</ul>
+</li>
+<li><p>Improvement in performance of current tensors</p></li>
+<li><p>Lambdify option for tensors</p></li>
+<li><p>Support for vectors at arbitrary space-time symbolically as 1<sup>st</sup> order tensor.</p></li>
+<li><p>Support for scalars at arbitrary space-time symbolically as 0<sup>th</sup> order tensor.</p></li>
+<li><p>Addition of constants sub-module to symbolic module</p></li>
+<li><p>Improvement in speed of Geodesic plotting</p></li>
+<li><p>Move away from Jupyter and Plotly Widgets</p></li>
+<li><p>New Plotting Framework</p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>Contributors<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>This is the complete list of the people that contributed to this release, with a + sign indicating first contribution.</p>
+<ul class="simple">
+<li><p>Shreyas Bapat</p></li>
+<li><p>Ritwik Saha</p></li>
+<li><p>Sofía Ortín Vela</p></li>
+<li><p>Varun Singh</p></li>
+<li><p>Arnav Das+</p></li>
+<li><p>Calvin Jay Ross+</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="einsteinpy-0-2-0-2019-07-15">
+<h2>einsteinpy 0.2.0 - 2019-07-15<a class="headerlink" href="#einsteinpy-0-2-0-2019-07-15" title="Permalink to this headline">¶</a></h2>
+<p>This release brings a lot of new features for the EinsteinPy Users.</p>
+<p>A better API, intuitive structure and easy coordinates handling! This major release
+comes before Python in Astronomy 2019 workshop and brings a lots of cool stuff.</p>
+<p>Part of this release is sponsored by ESA/ESTEC – Adv. Concepts &amp; Studies Office
+(European Space Agency), through Summer of Code in Space (SOCIS) 2019 program.</p>
+<p>This is a short-term supported version and will be supported only until December 2019.
+For any feature request, write a mail to <a class="reference external" href="mailto:developers&#37;&#52;&#48;einsteinpy&#46;org">developers<span>&#64;</span>einsteinpy<span>&#46;</span>org</a> describing what you need.</p>
+<div class="section" id="id5">
+<h3>Features<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Kerr Metric</p></li>
+<li><p>Kerr-Newman Metric</p></li>
+<li><p>Coordinates Module with Boyer Lindquist Coordinates and transformation</p></li>
+<li><p>Bodies Module</p></li>
+<li><p>Defining Geodesics with ease!</p></li>
+<li><p>Animated plots</p></li>
+<li><p>Intuitive API for plotting</p></li>
+<li><p>Schwarzschild Hypersurface Embedding</p></li>
+<li><p>Interactive Plotting</p></li>
+<li><p>Environment-aware plotting and exceptional support for iPython Notebooks!</p></li>
+<li><p>Support for Tensor Algebra in General Relativity</p></li>
+<li><p>Symbolic Manipulation of Metric Tensor, Riemann Tensor and Ricci Tensor</p></li>
+<li><p>Support for Index Raising and Lowering in Tensors</p></li>
+<li><p>Numerical Calculation and Symbolic Manipulation of Christoffel Symbols</p></li>
+<li><p>Calculations of Event Horizon and Ergosphere of Kerr Black holes!</p></li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h3>Contributors<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>This is the complete list of the people that contributed to this release, with a + sign indicating first contribution.</p>
+<ul class="simple">
+<li><p>Shreyas Bapat</p></li>
+<li><p>Ritwik Saha</p></li>
+<li><p>Bhavya Bhatt</p></li>
+<li><p>Sofía Ortín Vela+</p></li>
+<li><p>Raphael Reyna+</p></li>
+<li><p>Prithvi Manoj Krishna+</p></li>
+<li><p>Manvi Gupta+</p></li>
+<li><p>Divya Gupta+</p></li>
+<li><p>Yash Sharma+</p></li>
+<li><p>Shilpi Jain+</p></li>
+<li><p>Rishi Sharma+</p></li>
+<li><p>Varun Singh+</p></li>
+<li><p>Alpesh Jamgade+</p></li>
+<li><p>Saurabh Bansal+</p></li>
+<li><p>Tanmay Rustagi+</p></li>
+<li><p>Abhijeet Manhas+</p></li>
+<li><p>Ankit Khandelwal+</p></li>
+<li><p>Tushar Tyagi+</p></li>
+<li><p>Hrishikesh Sarode</p></li>
+<li><p>Naman Tayal+</p></li>
+<li><p>Ratin Kumar+</p></li>
+<li><p>Govind Dixit+</p></li>
+<li><p>Jialin Ma+</p></li>
+</ul>
+</div>
+<div class="section" id="bugs-fixed">
+<h3>Bugs Fixed<a class="headerlink" href="#bugs-fixed" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/einsteinpy/einsteinpy/issues/115">Issue #115</a>: Coordinate Conversion had naming issues that made them confusing!</p></li>
+<li><p><a class="reference external" href="https://github.com/einsteinpy/einsteinpy/issues/185">Issue #185</a>: Isort had conflicts with Black</p></li>
+<li><p><a class="reference external" href="https://github.com/einsteinpy/einsteinpy/issues/210">Issue #210</a>: Same notebook had two different listings in Example Gallery</p></li>
+<li><p><a class="reference external" href="https://github.com/einsteinpy/einsteinpy/issues/264">Issue #264</a>: Removing all relative imports</p></li>
+<li><p><a class="reference external" href="https://github.com/einsteinpy/einsteinpy/issues/265">Issue #265</a>: New modules were lacking API Docs</p></li>
+<li><p><a class="reference external" href="https://github.com/einsteinpy/einsteinpy/issues/266">Issue #266</a>: The logo on documentation was not rendering</p></li>
+<li><p><a class="reference external" href="https://github.com/einsteinpy/einsteinpy/issues/267">Issue #267</a>: Docs were not present for Ricci Tensor and Vacuum Metrics</p></li>
+<li><p><a class="reference external" href="https://github.com/einsteinpy/einsteinpy/issues/277">Issue #277</a>: Coordinate Conversion in plotting module was handled incorrectly</p></li>
+</ul>
+</div>
+<div class="section" id="backwards-incompatible-changes">
+<h3>Backwards incompatible changes<a class="headerlink" href="#backwards-incompatible-changes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>The old <code class="code docutils literal notranslate"><span class="pre">StaticGeodesicPlotter</span></code> has been renamed to
+<code class="xref py py-class docutils literal notranslate"><span class="pre">einsteinpy.plotting.senile.StaticGeodesicPlotter</span></code>, please adjust
+your imports accordingly</p></li>
+<li><p>The old <code class="code docutils literal notranslate"><span class="pre">ScatterGeodesicPlotter</span></code> has been renamed to
+<code class="xref py py-class docutils literal notranslate"><span class="pre">einsteinpy.plotting.senile.ScatterGeodesicPlotter</span></code>, please adjust
+your imports accordingly.</p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">einsteinpy.metric.Schwarzschild</span></code>,
+<code class="xref py py-class docutils literal notranslate"><span class="pre">einsteinpy.metric.Kerr</span></code>, and
+<code class="xref py py-class docutils literal notranslate"><span class="pre">einsteinpy.metric.KerrNewman</span></code> now have different signatures for
+class methods, and they now explicitly support <code class="xref py py-mod docutils literal notranslate"><span class="pre">einsteinpy.coordinates</span></code>
+coordinate objects. Check out the notebooks and their respective documentation.</p></li>
+<li><p>The old <cite>coordinates</cite> conversion in <code class="xref py py-mod docutils literal notranslate"><span class="pre">einsteinpy.utils</span></code> has been deprecated.</p></li>
+<li><p>The old <cite>symbolic</cite> module in <code class="xref py py-mod docutils literal notranslate"><span class="pre">einsteinpy.utils</span></code> has been moved to
+<code class="xref py py-mod docutils literal notranslate"><span class="pre">einsteinpy.symbolic</span></code>.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="einsteinpy-0-1-0-2019-03-08">
+<h2>einsteinpy 0.1.0 - 2019-03-08<a class="headerlink" href="#einsteinpy-0-1-0-2019-03-08" title="Permalink to this headline">¶</a></h2>
+<p>This is a major first release for world’s first actively maintained python library
+for General Relativity and Numerical methods. This major release just comes before
+the Annual AstroMeet of IIT Mandi, AstraX. This will be a short term support version
+and will be supported only until late 2019.</p>
+<div class="section" id="id7">
+<h3>Features<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Schwarzschild Geometry Analysis and trajectory calculation</p></li>
+<li><p>Symbolic Calculation of various tensors in GR</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Christoffel Symbols</p></li>
+<li><p>Riemann Curvature Tensor</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>Static Geodesic Plotting</p></li>
+<li><p>Velocity of Coordinate time w.r.t proper time</p></li>
+<li><p>Easy Calculation of Schwarzschild Radius</p></li>
+<li><p>Coordinate conversion with unit handling</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Spherical/Cartesian Coordinates</p></li>
+<li><p>Boyer-Lindquist/Cartesian Coordinates</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id8">
+<h3>Contributors<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>This is the complete list of the people that contributed to this release, with a + sign indicating first contribution.</p>
+<ul class="simple">
+<li><p>Shreyas Bapat+</p></li>
+<li><p>Ritwik Saha+</p></li>
+<li><p>Bhavya Bhatt+</p></li>
+<li><p>Priyanshu Khandelwal+</p></li>
+<li><p>Gaurav Kumar+</p></li>
+<li><p>Hrishikesh Sarode+</p></li>
+<li><p>Sashank Mishra+</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="dev_guide.html" class="btn btn-neutral float-right" title="Developer Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="examples/Weyl%20Tensor%20symbolic%20calculation.html" class="btn btn-neutral float-left" title="Weyl Tensor calculations using Symbolic module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021 EinsteinPy Development Team.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

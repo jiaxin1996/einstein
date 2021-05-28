@@ -1,0 +1,365 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Developer Guide &mdash; EinsteinPy</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="EinsteinPy API" href="api/index.html" />
+    <link rel="prev" title="What’s new" href="changelog.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> EinsteinPy
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide.html">User guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metric.html">Vacuum Solutions to Einstein’s Field Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter.html">Jupyter notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">What’s new</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Developer Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#bug-reporting">Bug reporting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#code-writing">Code writing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#development-environment">Development environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#code-linting">Code Linting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">EinsteinPy API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codeofconduct.html">Code of Conduct</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EinsteinPy</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Developer Guide</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/dev_guide.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="developer-guide">
+<h1>Developer Guide<a class="headerlink" href="#developer-guide" title="Permalink to this headline">¶</a></h1>
+<p>Einsteinpy is a community project, hence all contributions are more than
+welcome!</p>
+<div class="section" id="bug-reporting">
+<h2>Bug reporting<a class="headerlink" href="#bug-reporting" title="Permalink to this headline">¶</a></h2>
+<p>Not only things break all the time, but also different people have different
+use cases for the project. If you find anything that doesn’t work as expected
+or have suggestions, please refer to the <a class="reference external" href="https://github.com/einsteinpy/einsteinpy/issues">issue tracker</a> on GitHub.</p>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<p>Documentation can always be improved and made easier to understand for
+newcomers. The docs are stored in text files under the <cite>docs/source</cite>
+directory, so if you think anything can be improved there please edit the
+files and proceed in the same way as with <a class="reference internal" href="#code-writing">code writing</a>.</p>
+<p>The Python classes and methods also feature inline docs: if you detect
+any inconsistency or opportunity for improvement, you can edit those too.</p>
+<p>Besides, the <a class="reference external" href="https://github.com/einsteinpy/einsteinpy/wiki">wiki</a> is open for everybody to edit, so feel free to add
+new content.</p>
+<p>To build the docs, you must first create a development environment (see
+below) and then in the <code class="docutils literal notranslate"><span class="pre">docs/</span></code> directory run:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> docs
+$ make html
+</pre></div>
+</div>
+</div></blockquote>
+<p>After this, the new docs will be inside <code class="docutils literal notranslate"><span class="pre">build/html</span></code>. You can open
+them by running an HTTP server:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> build/html
+$ python -m http.server
+Serving HTTP on <span class="m">0</span>.0.0.0 port <span class="m">8000</span> ...
+</pre></div>
+</div>
+</div></blockquote>
+<p>And point your browser to <a class="reference external" href="http://0.0.0.0:8000">http://0.0.0.0:8000</a>.</p>
+</div>
+<div class="section" id="code-writing">
+<h2>Code writing<a class="headerlink" href="#code-writing" title="Permalink to this headline">¶</a></h2>
+<p>Code contributions are welcome! If you are looking for a place to start,
+help us fixing bugs in einsteinpy and check out the <a class="reference external" href="https://github.com/einsteinpy/einsteinpy/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy">“easy” tag</a>. Those
+should be easier to fix than the others and require less knowledge about the
+library.</p>
+<p>If you are hesitant on what IDE or editor to use, just choose one that
+you find comfortable and stick to it while you are learning. People have
+strong opinions on which editor is better so I recommend you to ignore
+the crowd for the time being - again, choose one that you like :)</p>
+<p>If you ask me for a recommendation, I would suggest PyCharm (complete
+IDE, free and gratis, RAM-hungry) or vim (powerful editor, very lightweight,
+steep learning curve). Other people use Spyder, emacs, gedit, Notepad++,
+Sublime, Atom…</p>
+<p>You will also need to understand how git works. git is a decentralized
+version control system that preserves the history of the software, helps
+tracking changes and allows for multiple versions of the code to exist
+at the same time. If you are new to git and version control, I recommend
+following <a class="reference external" href="https://try.github.io/">the Try Git tutorial</a>.</p>
+<p>If you already know how all this works and would like to contribute new
+features then that’s awesome! Before rushing out though please make sure it
+is within the scope of the library so you don’t waste your time -
+<a class="reference external" href="mailto:all&#37;&#52;&#48;einsteinpy&#46;org">email</a> us or <a class="reference external" href="https://riot.im/app/#/room/#einsteinpy:matrix.org">chat</a> with us on Riot!.</p>
+<p>If the feature you suggest happens to be useful and within scope, you will
+probably be advised to create a new <a class="reference external" href="https://github.com/einsteinpy/einsteinpy/wiki">wiki</a> page with some information
+about what problem you are trying to solve, how do you plan to do it and
+a sketch or idea of how the API is going to look like. You can go there
+to read other good examples on how to do it. The purpose is to describe
+without too much code what you are trying to accomplish to justify the
+effort and to make it understandable to a broader audience.</p>
+<p>All new features should be thoroughly tested, and in the ideal case the
+coverage rate should increase or stay the same. Automatic services will ensure
+your code works on all the operative systems and package combinations
+einsteinpy support - specifically, note that einsteinpy is a Python 3 only
+library.</p>
+</div>
+<div class="section" id="development-environment">
+<h2>Development environment<a class="headerlink" href="#development-environment" title="Permalink to this headline">¶</a></h2>
+<p>These are some succint steps to set up a development environment:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://git-scm.com/">Install git</a> on your computer.</p></li>
+<li><p><a class="reference external" href="https://github.com/">Register to GitHub</a>.</p></li>
+<li><p><a class="reference external" href="https://help.github.com/articles/fork-a-repo/">Fork einsteinpy</a>.</p></li>
+<li><p><a class="reference external" href="https://help.github.com/articles/cloning-a-repository/">Clone your fork</a>.</p></li>
+<li><p>Install it in development mode using
+<code class="code docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--editable</span> <span class="pre">/path/to/einsteinpy/[dev]</span></code> (this means that the
+installed code will change as soon as you change it in the download
+location).</p></li>
+<li><p>Create a new branch.</p></li>
+<li><p>Make changes and commit.</p></li>
+<li><p><a class="reference external" href="https://help.github.com/articles/pushing-to-a-remote/">Push to your fork</a>.</p></li>
+<li><p><a class="reference external" href="https://help.github.com/articles/creating-a-pull-request/">Open a pull request!</a></p></li>
+</ol>
+</div>
+<div class="section" id="code-linting">
+<h2>Code Linting<a class="headerlink" href="#code-linting" title="Permalink to this headline">¶</a></h2>
+<p>To get the quality checks passed, the code should follow some standards listed below:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://black.readthedocs.io/en/stable/">Black</a> for code formatting.</p></li>
+<li><p><a class="reference external" href="https://isort.readthedocs.io/en/latest/">isort</a> for imports sorting.</p></li>
+<li><p><a class="reference external" href="http://mypy-lang.org/">mypy</a> for static type checking.</p></li>
+</ol>
+<p>But to avoid confusion, we have setup <a class="reference external" href="https://tox.readthedocs.io/en/latest/">tox</a> for
+doing this in one command and doing it properly! Run:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> einsteinpy/
+$ tox -e reformat
+</pre></div>
+</div>
+</div></blockquote>
+<p>And it will format all your code!</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="api/index.html" class="btn btn-neutral float-right" title="EinsteinPy API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="changelog.html" class="btn btn-neutral float-left" title="What’s new" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021 EinsteinPy Development Team.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

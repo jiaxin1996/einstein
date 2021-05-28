@@ -1,0 +1,299 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Jupyter notebooks &mdash; EinsteinPy</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Plotting Spacial Hypersurface Embedding for Schwarzschild Space-Time" href="examples/Plotting%20spacial%20hypersurface%20embedding%20for%20schwarzschild%20spacetime.html" />
+    <link rel="prev" title="Vacuum Solutions to Einstein’s Field Equations" href="metric.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> EinsteinPy
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide.html">User guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metric.html">Vacuum Solutions to Einstein’s Field Equations</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Jupyter notebooks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples/Plotting%20spacial%20hypersurface%20embedding%20for%20schwarzschild%20spacetime.html">Plotting Spacial Hypersurface Embedding for Schwarzschild Space-Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/Shadow%20cast%20by%20an%20thin%20emission%20disk%20around%20a%20black%20hole.html">Shadow cast by an thin emission disk around a Schwarzschild Black Hole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/Animations%20in%20EinsteinPy.html">Animations in EinsteinPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/Using%20Geodesics%20%28Back-ends%20%26%20Plotting%29.html">Using Geodesics (Back-ends &amp; Plotting)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/Visualizing%20Event%20Horizon%20and%20Ergosphere%20%28Singularities%29%20of%20Kerr%20Metric%20or%20Black%20Hole.html">Visualizing Event Horizon and Ergosphere (Singularities) of Kerr Metric or Black Hole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/Visualizing%20Frame%20Dragging%20in%20Kerr%20Spacetime.html">Visualizing Frame Dragging in Kerr Spacetime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/Visualizing%20Precession%20in%20Schwarzschild%20Spacetime.html">Visualizing Precession in Schwarzschild Spacetime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/Einstein%20Tensor%20symbolic%20calculation.html">Einstein Tensor calculations using Symbolic module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/Lambdify%20symbolic%20calculation.html">Lambdify in symbolic module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/Playing%20with%20Contravariant%20and%20Covariant%20Indices%20in%20Tensors%28Symbolic%29.html">Contravariant &amp; Covariant indices in Tensors (Symbolic)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/Predefined%20Metrics%20in%20Symbolic%20Module.html">Predefined Metrics in Symbolic Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/Ricci%20Tensor%20and%20Scalar%20Curvature%20symbolic%20calculation.html">Ricci Tensor and Scalar Curvature calculations using Symbolic module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/Symbolically%20Understanding%20Christoffel%20Symbol%20and%20Riemann%20Curvature%20Tensor%20using%20EinsteinPy.html">Symbolically Understanding Christoffel Symbol and Riemann Curvature Tensor using EinsteinPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/Weyl%20Tensor%20symbolic%20calculation.html">Weyl Tensor calculations using Symbolic module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">What’s new</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">EinsteinPy API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codeofconduct.html">Code of Conduct</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EinsteinPy</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Jupyter notebooks</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/jupyter.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="jupyter-notebooks">
+<h1>Jupyter notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">hypersurface</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/Plotting%20spacial%20hypersurface%20embedding%20for%20schwarzschild%20spacetime.html">Plotting Spacial Hypersurface Embedding for Schwarzschild Space-Time</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">rays</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/Shadow%20cast%20by%20an%20thin%20emission%20disk%20around%20a%20black%20hole.html">Shadow cast by an thin emission disk around a Schwarzschild Black Hole</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">metric, bodies, geodesic, coordinates</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/Animations%20in%20EinsteinPy.html">Animations in EinsteinPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/Using%20Geodesics%20%28Back-ends%20%26%20Plotting%29.html">Using Geodesics (Back-ends &amp; Plotting)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/Visualizing%20Event%20Horizon%20and%20Ergosphere%20%28Singularities%29%20of%20Kerr%20Metric%20or%20Black%20Hole.html">Visualizing Event Horizon and Ergosphere (Singularities) of Kerr Metric or Black Hole</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/Visualizing%20Frame%20Dragging%20in%20Kerr%20Spacetime.html">Visualizing Frame Dragging in Kerr Spacetime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/Visualizing%20Precession%20in%20Schwarzschild%20Spacetime.html">Visualizing Precession in Schwarzschild Spacetime</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">symbolic</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/Einstein%20Tensor%20symbolic%20calculation.html">Einstein Tensor calculations using Symbolic module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/Lambdify%20symbolic%20calculation.html">Lambdify in symbolic module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/Playing%20with%20Contravariant%20and%20Covariant%20Indices%20in%20Tensors%28Symbolic%29.html">Contravariant &amp; Covariant indices in Tensors (Symbolic)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/Predefined%20Metrics%20in%20Symbolic%20Module.html">Predefined Metrics in Symbolic Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/Ricci%20Tensor%20and%20Scalar%20Curvature%20symbolic%20calculation.html">Ricci Tensor and Scalar Curvature calculations using Symbolic module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/Symbolically%20Understanding%20Christoffel%20Symbol%20and%20Riemann%20Curvature%20Tensor%20using%20EinsteinPy.html">Symbolically Understanding Christoffel Symbol and Riemann Curvature Tensor using EinsteinPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/Weyl%20Tensor%20symbolic%20calculation.html">Weyl Tensor calculations using Symbolic module</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="examples/Plotting%20spacial%20hypersurface%20embedding%20for%20schwarzschild%20spacetime.html" class="btn btn-neutral float-right" title="Plotting Spacial Hypersurface Embedding for Schwarzschild Space-Time" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="metric.html" class="btn btn-neutral float-left" title="Vacuum Solutions to Einstein’s Field Equations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021 EinsteinPy Development Team.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

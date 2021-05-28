@@ -1,0 +1,493 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>User guide &mdash; EinsteinPy</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Vacuum Solutions to Einstein’s Field Equations" href="metric.html" />
+    <link rel="prev" title="Getting started" href="getting_started.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> EinsteinPy
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">User guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#defining-the-geometry-metric-objects">Defining the geometry: <code class="xref py py-class docutils literal notranslate"><span class="pre">metric</span></code> objects</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#schwarzschild-metric">Schwarzschild Metric</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#defining-initial-parameters-and-our-metric-object">Defining initial parameters and our Metric Object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#calculating-trajectory-time-like-geodesic">Calculating Trajectory/Time-like Geodesic</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#bodies-module-bodies">Bodies Module: <code class="xref py py-class docutils literal notranslate"><span class="pre">bodies</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#utilities-utils">Utilities: <code class="xref py py-class docutils literal notranslate"><span class="pre">utils</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#coordinate-conversion">Coordinate Conversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#symbolic-calculations">Symbolic Calculations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#future-plans">Future Plans</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="metric.html">Vacuum Solutions to Einstein’s Field Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter.html">Jupyter notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">What’s new</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev_guide.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">EinsteinPy API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="codeofconduct.html">Code of Conduct</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EinsteinPy</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>User guide</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/user_guide.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="user-guide">
+<h1>User guide<a class="headerlink" href="#user-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="defining-the-geometry-metric-objects">
+<h2>Defining the geometry: <code class="xref py py-class docutils literal notranslate"><span class="pre">metric</span></code> objects<a class="headerlink" href="#defining-the-geometry-metric-objects" title="Permalink to this headline">¶</a></h2>
+<p>EinsteinPy provides a way to define the background geometry, on which the code would deal with the relativistic dynamics. This geometry has a central operating quantity, known as the Metric Tensor, that encapsulates all the geometrical and topological information about the 4D spacetime.</p>
+<ul class="simple">
+<li><p>EinsteinPy provides a <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseMetric</span></code> class, that has various utility functions and a proper template, that can be used to define custom Metric classes. All pre-defined classes in <code class="xref py py-class docutils literal notranslate"><span class="pre">metric</span></code> derive from this class.</p></li>
+<li><p>The central quantity required to simulate trajectory of a particle in a gravitational field are the metric derivatives, that can be succinctly written using Christoffel Symbols.</p></li>
+<li><p>EinsteinPy provides an easy to use interface to calculate these symbols.</p></li>
+<li><p>BaseMetric also provides support for <code class="docutils literal notranslate"><span class="pre">f_vec</span></code> and <code class="docutils literal notranslate"><span class="pre">perturbation</span></code>, where <code class="docutils literal notranslate"><span class="pre">f_vec</span></code> corresponds to the RHS of the geodesic equation and <code class="docutils literal notranslate"><span class="pre">perturbation</span></code> is a linear Kerr-Schild Perturbation, that can be defined on the underlying metric.</p></li>
+<li><p>Note that, EinsteinPy does not perform physical checks on <code class="docutils literal notranslate"><span class="pre">perturbation</span></code> currently, and so, users should exercise caution while using it.</p></li>
+</ul>
+<p>We provide an example below, showing how to calculate Time-like Geodesics in Schwarzschild spacetime.</p>
+<div class="section" id="schwarzschild-metric">
+<h3>Schwarzschild Metric<a class="headerlink" href="#schwarzschild-metric" title="Permalink to this headline">¶</a></h3>
+<p>EinsteinPy provides an intuitive interface for calculating time-like geodesics in Schwarzschild spacetime.</p>
+<p>First of all, we import all the relevant modules and classes:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">einsteinpy.coordinates.utils</span> <span class="kn">import</span> <span class="n">four_position</span><span class="p">,</span> <span class="n">stacked_vec</span>
+<span class="kn">from</span> <span class="nn">einsteinpy.geodesic</span> <span class="kn">import</span> <span class="n">Geodesic</span>
+<span class="kn">from</span> <span class="nn">einsteinpy.metric</span> <span class="kn">import</span> <span class="n">Schwarzschild</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="section" id="defining-initial-parameters-and-our-metric-object">
+<h4>Defining initial parameters and our Metric Object<a class="headerlink" href="#defining-initial-parameters-and-our-metric-object" title="Permalink to this headline">¶</a></h4>
+<p>Now, we define the initial parameters, that specify the Schwarzschild metric and our test particle.</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="mf">6e24</span>  <span class="c1"># Mass</span>
+<span class="n">t</span> <span class="o">=</span> <span class="mf">0.</span>  <span class="c1"># Coordinate Time (has no effect in this case, as Schwarzschild metric is static)</span>
+<span class="n">x_vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">130.0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">8</span><span class="p">])</span>  <span class="c1"># 3-Position of test particle</span>
+<span class="n">v_vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1900.0</span><span class="p">])</span>  <span class="c1"># 3-Velocity of test particle</span>
+
+<span class="n">ms_cov</span> <span class="o">=</span> <span class="n">Schwarzschild</span><span class="p">(</span><span class="n">M</span><span class="o">=</span><span class="n">M</span><span class="p">)</span> <span class="c1"># Schwarzschild Metric Object</span>
+<span class="n">x_4vec</span> <span class="o">=</span> <span class="n">four_position</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x_vec</span><span class="p">)</span> <span class="c1"># Getting Position 4-Vector</span>
+<span class="n">ms_cov_mat</span> <span class="o">=</span> <span class="n">ms_cov</span><span class="o">.</span><span class="n">metric_covariant</span><span class="p">(</span><span class="n">x_4vec</span><span class="p">)</span> <span class="c1"># Calculating Schwarzschild Metric at x_4vec</span>
+<span class="n">init_vec</span> <span class="o">=</span> <span class="n">stacked_vec</span><span class="p">(</span><span class="n">ms_cov_mat</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">x_vec</span><span class="p">,</span> <span class="n">v_vec</span><span class="p">,</span> <span class="n">time_like</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># Contains 4-Pos and 4-Vel</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="calculating-trajectory-time-like-geodesic">
+<h4>Calculating Trajectory/Time-like Geodesic<a class="headerlink" href="#calculating-trajectory-time-like-geodesic" title="Permalink to this headline">¶</a></h4>
+<p>After creating the metric object and the initial vector, we can use <code class="xref py py-class docutils literal notranslate"><span class="pre">Geodesic</span></code> to create a Geodesic object, that automatically calculates the trajectory.</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculating Geodesic</span>
+<span class="n">geod</span> <span class="o">=</span> <span class="n">Geodesic</span><span class="p">(</span><span class="n">metric</span><span class="o">=</span><span class="n">ms_cov</span><span class="p">,</span> <span class="n">init_vec</span><span class="o">=</span><span class="n">init_vec</span><span class="p">,</span> <span class="n">end_lambda</span><span class="o">=</span><span class="mf">0.002</span><span class="p">,</span> <span class="n">step_size</span><span class="o">=</span><span class="mf">5e-8</span><span class="p">)</span>
+<span class="c1"># Getting a descriptive summary on geod</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">geod</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Geodesic</span> <span class="n">Object</span><span class="p">:</span>
+
+<span class="n">Metric</span> <span class="o">=</span> <span class="p">((</span>
+<span class="n">Name</span><span class="p">:</span> <span class="p">(</span><span class="n">Schwarzschild</span> <span class="n">Metric</span><span class="p">),</span>
+<span class="n">Coordinates</span><span class="p">:</span> <span class="p">(</span><span class="n">S</span><span class="p">),</span>
+<span class="n">Mass</span><span class="p">:</span> <span class="p">(</span><span class="mf">6e+24</span><span class="p">),</span>
+<span class="n">Spin</span> <span class="n">parameter</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+<span class="n">Charge</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+<span class="n">Schwarzschild</span> <span class="n">Radius</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.008911392322942397</span><span class="p">)</span>
+<span class="p">)),</span>
+
+<span class="n">Initial</span> <span class="n">Vector</span> <span class="o">=</span> <span class="p">([</span> <span class="mf">0.00000000e+00</span>  <span class="mf">1.30000000e+02</span>  <span class="mf">1.57079633e+00</span> <span class="o">-</span><span class="mf">3.92699082e-01</span>
+<span class="mf">1.00003462e+00</span>  <span class="mf">0.00000000e+00</span>  <span class="mf">0.00000000e+00</span>  <span class="mf">1.90000000e+03</span><span class="p">]),</span>
+
+<span class="n">Trajectory</span> <span class="o">=</span> <span class="p">([[</span> <span class="mf">0.00000000e+00</span>  <span class="mf">1.20104339e+02</span> <span class="o">-</span><span class="mf">4.97488462e+01</span> <span class="o">...</span>  <span class="mf">9.45228078e+04</span>
+<span class="mf">2.28198245e+05</span>  <span class="mf">0.00000000e+00</span><span class="p">]</span>
+<span class="p">[</span> <span class="mf">4.00013846e-08</span>  <span class="mf">1.20108103e+02</span> <span class="o">-</span><span class="mf">4.97397110e+01</span> <span class="o">...</span>  <span class="mf">9.36471118e+04</span>
+<span class="mf">2.28560931e+05</span> <span class="o">-</span><span class="mf">5.80379473e-14</span><span class="p">]</span>
+<span class="p">[</span> <span class="mf">4.40015231e-07</span>  <span class="mf">1.20143810e+02</span> <span class="o">-</span><span class="mf">4.96475618e+01</span> <span class="o">...</span>  <span class="mf">8.48885265e+04</span>
+<span class="mf">2.32184177e+05</span> <span class="o">-</span><span class="mf">6.38424865e-13</span><span class="p">]</span>
+<span class="o">...</span>
+<span class="p">[</span> <span class="mf">1.99928576e-03</span>  <span class="mf">1.29695466e+02</span> <span class="o">-</span><span class="mf">6.52793459e-01</span> <span class="o">...</span>  <span class="mf">1.20900076e+05</span>
+<span class="mf">2.46971585e+05</span> <span class="o">-</span><span class="mf">1.86135457e-10</span><span class="p">]</span>
+<span class="p">[</span> <span class="mf">1.99968577e-03</span>  <span class="mf">1.29741922e+02</span> <span class="o">-</span><span class="mf">5.53995726e-01</span> <span class="o">...</span>  <span class="mf">1.11380963e+05</span>
+<span class="mf">2.47015864e+05</span> <span class="o">-</span><span class="mf">1.74024168e-10</span><span class="p">]</span>
+<span class="p">[</span> <span class="mf">2.00008578e-03</span>  <span class="mf">1.29784572e+02</span> <span class="o">-</span><span class="mf">4.55181739e-01</span> <span class="o">...</span>  <span class="mf">1.01868292e+05</span>
+<span class="mf">2.47052855e+05</span> <span class="o">-</span><span class="mf">1.61922169e-10</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+</div>
+<div class="section" id="bodies-module-bodies">
+<h2>Bodies Module: <code class="xref py py-class docutils literal notranslate"><span class="pre">bodies</span></code><a class="headerlink" href="#bodies-module-bodies" title="Permalink to this headline">¶</a></h2>
+<p>EinsteinPy has a module to define the attractor and revolving bodies, using which plotting and geodesic calculation
+becomes much easier.</p>
+<p>Importing all the relevant modules and classes :</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">from</span> <span class="nn">einsteinpy.coordinates</span> <span class="kn">import</span> <span class="n">BoyerLindquistDifferential</span>
+<span class="kn">from</span> <span class="nn">einsteinpy.metric</span> <span class="kn">import</span> <span class="n">Kerr</span>
+<span class="kn">from</span> <span class="nn">einsteinpy.bodies</span> <span class="kn">import</span> <span class="n">Body</span>
+<span class="kn">from</span> <span class="nn">einsteinpy.geodesic</span> <span class="kn">import</span> <span class="n">Geodesic</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Defining various astronomical bodies :</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">spin_factor</span> <span class="o">=</span> <span class="mf">0.3</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">m</span>
+<span class="n">Attractor</span> <span class="o">=</span> <span class="n">Body</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;BH&quot;</span><span class="p">,</span> <span class="n">mass</span> <span class="o">=</span> <span class="mf">1.989e30</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">kg</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="n">spin_factor</span><span class="p">)</span>
+<span class="n">BL_obj</span> <span class="o">=</span> <span class="n">BoyerLindquistDifferential</span><span class="p">(</span><span class="mf">50e5</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">rad</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">rad</span><span class="p">,</span>
+                                    <span class="mi">0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">,</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">rad</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">,</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">rad</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">,</span>
+                                    <span class="n">spin_factor</span><span class="p">)</span>
+<span class="n">Particle</span> <span class="o">=</span> <span class="n">Body</span><span class="p">(</span><span class="n">differential</span> <span class="o">=</span> <span class="n">BL_obj</span><span class="p">,</span> <span class="n">parent</span> <span class="o">=</span> <span class="n">Attractor</span><span class="p">)</span>
+<span class="n">geodesic</span> <span class="o">=</span> <span class="n">Geodesic</span><span class="p">(</span><span class="n">body</span> <span class="o">=</span> <span class="n">Particle</span><span class="p">,</span> <span class="n">end_lambda</span> <span class="o">=</span> <span class="p">((</span><span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">year</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">))</span><span class="o">.</span><span class="n">value</span> <span class="o">/</span> <span class="mi">930</span><span class="p">,</span>
+                    <span class="n">step_size</span> <span class="o">=</span> <span class="p">((</span><span class="mf">0.02</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">min</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">))</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                    <span class="n">metric</span><span class="o">=</span><span class="n">Kerr</span><span class="p">)</span>
+<span class="n">geodesic</span><span class="o">.</span><span class="n">trajectory</span>  <span class="c1"># get the values of the trajectory</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Plotting the trajectory :</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">einsteinpy.plotting</span> <span class="kn">import</span> <span class="n">GeodesicPlotter</span>
+<span class="n">obj</span> <span class="o">=</span> <span class="n">GeodesicPlotter</span><span class="p">()</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">geodesic</span><span class="p">)</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="utilities-utils">
+<h2>Utilities: <code class="xref py py-class docutils literal notranslate"><span class="pre">utils</span></code><a class="headerlink" href="#utilities-utils" title="Permalink to this headline">¶</a></h2>
+<p>EinsteinPy provides a great set of utility functions which are frequently used in general and numerical relativity.</p>
+<ul class="simple">
+<li><p>Conversion of Coordinates (both position &amp; velocity)</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Cartesian/Spherical</p></li>
+<li><p>Cartesian/Boyer-Lindquist</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>Calculation of Schwarzschild Geometry related quantities</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Schwarzschild Radius</p></li>
+<li><p>Rate of change of coordinate time w.r.t. proper time</p></li>
+</ul>
+</div></blockquote>
+<div class="section" id="coordinate-conversion">
+<h3>Coordinate Conversion<a class="headerlink" href="#coordinate-conversion" title="Permalink to this headline">¶</a></h3>
+<p>In a short example, we would see coordinate conversion between Cartesian and Boyer-Lindquist Coordinates.</p>
+<p>Using the functions:</p>
+<ul>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">to_cartesian</span></code></p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">to_bl</span></code></p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">from</span> <span class="nn">einsteinpy.coordinates</span> <span class="kn">import</span> <span class="n">BoyerLindquistDifferential</span><span class="p">,</span> <span class="n">CartesianDifferential</span><span class="p">,</span> <span class="n">Cartesian</span><span class="p">,</span> <span class="n">BoyerLindquist</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span>
+
+<span class="n">pos_vec</span> <span class="o">=</span> <span class="n">Cartesian</span><span class="p">(</span><span class="mf">.265003774</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">,</span> <span class="o">-</span><span class="mf">153.000000e-03</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">,</span>  <span class="mi">0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">)</span>
+
+<span class="n">bl_pos</span> <span class="o">=</span> <span class="n">pos_vec</span><span class="o">.</span><span class="n">to_bl</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bl_pos</span><span class="p">)</span>
+
+<span class="n">cartsn_pos</span> <span class="o">=</span> <span class="n">bl_pos</span><span class="o">.</span><span class="n">to_cartesian</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cartsn_pos</span><span class="p">)</span>
+
+<span class="n">pos_vel_coord</span> <span class="o">=</span> <span class="n">CartesianDifferential</span><span class="p">(</span><span class="mf">.265003774</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">,</span> <span class="o">-</span><span class="mf">153.000000e-03</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">,</span>  <span class="mi">0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="p">,</span>
+                          <span class="mf">145.45557</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">,</span> <span class="mf">251.93643748389</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">,</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">km</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
+
+<span class="n">bl_coord</span> <span class="o">=</span> <span class="n">pos_vel_coord</span><span class="o">.</span><span class="n">bl_differential</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">bl_coord</span> <span class="o">=</span> <span class="n">bl_coord</span><span class="o">.</span><span class="n">si_values</span><span class="p">()</span>
+<span class="n">bl_vel</span> <span class="o">=</span> <span class="n">bl_coord</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bl_vel</span><span class="p">)</span>
+
+<span class="n">cartsn_coord</span> <span class="o">=</span> <span class="n">bl_coord</span><span class="o">.</span><span class="n">cartesian_differential</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">cartsn_coord</span> <span class="o">=</span> <span class="n">cartsn_coord</span><span class="o">.</span><span class="n">si_values</span><span class="p">()</span>
+<span class="n">cartsn_vel</span> <span class="o">=</span> <span class="n">cartsn_coord</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cartsn_vel</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="mf">200.</span>  <span class="o">-</span><span class="mf">100.</span>    <span class="mf">20.5</span><span class="p">]</span>
+<span class="p">[</span><span class="mf">224.54398697</span>   <span class="mf">1.47937288</span>  <span class="o">-</span><span class="mf">0.46364761</span><span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="symbolic-calculations">
+<h3>Symbolic Calculations<a class="headerlink" href="#symbolic-calculations" title="Permalink to this headline">¶</a></h3>
+<p>EinsteinPy also supports symbolic calculations in
+<code class="xref py py-class docutils literal notranslate"><span class="pre">symbolic</span></code></p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span>
+<span class="kn">from</span> <span class="nn">einsteinpy.symbolic</span> <span class="kn">import</span> <span class="n">SchwarzschildMetric</span><span class="p">,</span> <span class="n">ChristoffelSymbols</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="n">SchwarzschildMetric</span><span class="p">()</span>
+<span class="n">ch</span> <span class="o">=</span> <span class="n">ChristoffelSymbols</span><span class="o">.</span><span class="n">from_metric</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ch</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,:])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="n">r</span><span class="o">*</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">/</span><span class="n">r</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span>
+<span class="kn">from</span> <span class="nn">einsteinpy.symbolic</span> <span class="kn">import</span> <span class="n">SchwarzschildMetric</span><span class="p">,</span> <span class="n">EinsteinTensor</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="n">SchwarzschildMetric</span><span class="p">()</span>
+<span class="n">G1</span> <span class="o">=</span> <span class="n">EinsteinTensor</span><span class="o">.</span><span class="n">from_metric</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">G1</span><span class="o">.</span><span class="n">arr</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="o">-</span><span class="n">a</span> <span class="o">+</span> <span class="n">r</span><span class="p">)</span><span class="o">/</span><span class="n">r</span><span class="o">**</span><span class="mi">4</span> <span class="o">+</span> <span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">r</span><span class="p">)</span><span class="o">/</span><span class="n">r</span><span class="o">**</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">a</span><span class="o">/</span><span class="p">(</span><span class="n">r</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">r</span><span class="p">))</span> <span class="o">+</span> <span class="n">a</span><span class="o">/</span><span class="p">(</span><span class="n">r</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="o">-</span><span class="n">a</span> <span class="o">+</span> <span class="n">r</span><span class="p">)),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="future-plans">
+<h3>Future Plans<a class="headerlink" href="#future-plans" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Support for null-geodesics in different geometries</p></li>
+<li><p>Ultimate goal is providing numerical solutions for Einstein’s equations for arbitrarily complex matter distribution.</p></li>
+<li><p>Relativistic hydrodynamics</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="metric.html" class="btn btn-neutral float-right" title="Vacuum Solutions to Einstein’s Field Equations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="getting_started.html" class="btn btn-neutral float-left" title="Getting started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021 EinsteinPy Development Team.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
